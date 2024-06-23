@@ -6,9 +6,7 @@ public class ToglableActor : Actor
 {
     [SerializeField]
     bool Togglable = false;
-
     bool togled = false;
-
     public override void StartActivate()
     {
         if (!Togglable)
@@ -28,7 +26,6 @@ public class ToglableActor : Actor
                 togled = false;
             }
         }
-
     }
     public override void StartDeactivate()
     {
@@ -36,7 +33,5 @@ public class ToglableActor : Actor
         {
             base.StartDeactivate();
         }
-
     }
-
 }

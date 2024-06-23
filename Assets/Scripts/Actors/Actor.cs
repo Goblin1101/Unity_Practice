@@ -9,9 +9,6 @@ public class Actor : MonoBehaviour
     UnityEvent OnActivateAction;
     [SerializeField]
     UnityEvent OnDeactivateAction;
-
-
-
     public virtual void StartActivate()
     {
          OnActivateAction.Invoke();
@@ -20,7 +17,5 @@ public class Actor : MonoBehaviour
     {
          OnDeactivateAction.Invoke();
     }
-
-
-
 }
+

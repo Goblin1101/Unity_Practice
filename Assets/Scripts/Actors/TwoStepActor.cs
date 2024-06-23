@@ -14,17 +14,10 @@ public class TwoStepActor : Actor
     public bool Step_1;
     public bool Step_2;
 
-    
-
-    
     bool activative = true;
     bool deactivative = false;
-
-
-    // Update is called once per frame
     void Update()
     {
-
         if (Step_1 && Step_2)
         {
             if (activative)
