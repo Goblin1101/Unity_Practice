@@ -6,23 +6,12 @@ public class CameraControl : MonoBehaviour
 {
     Vector2 rotation = Vector2.zero;
     float angleXLimit = 50;
-
     [SerializeField]
     float lookSpeed = 3.0f;
-    // Start is called before the first frame update
-
     [SerializeField]
     float init_x;
     [SerializeField]
     float init_y;
-
-
-    private void Awake()
-    {
-
-
-    }
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
@@ -33,8 +22,6 @@ public class CameraControl : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
         }
-
-
         if(Input.GetMouseButton(1))
         {
             rotation.x -= Input.GetAxis("Mouse Y") * lookSpeed;

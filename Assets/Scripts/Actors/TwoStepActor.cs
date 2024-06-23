@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TwoStepActor : MonoBehaviour
+public class TwoStepActor : Actor
 {
     [SerializeField]
     [Header("Togglable")]
@@ -15,10 +15,7 @@ public class TwoStepActor : MonoBehaviour
     public bool Step_2;
 
     
-    [SerializeField]
-    UnityEvent ActivationEvent;
-    [SerializeField]
-    UnityEvent DeactivationEvent;
+
     
     bool activative = true;
     bool deactivative = false;
@@ -32,9 +29,9 @@ public class TwoStepActor : MonoBehaviour
         {
             if (activative)
             {
-            activative = false;
-            ActivationEvent.Invoke();
-            deactivative = true; 
+                activative = false;
+                StartActivate();
+                deactivative = true; 
             }
         }
         else
@@ -42,7 +39,7 @@ public class TwoStepActor : MonoBehaviour
             if (deactivative && !ShouldDoOnce)
             {
                 deactivative = false;
-                DeactivationEvent.Invoke();
+                StartDeactivate();
                 activative = true;
             }
         }

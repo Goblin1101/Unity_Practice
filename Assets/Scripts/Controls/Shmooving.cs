@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 public class Shmooving : CamUpdate
 {
     [SerializeField]
-    float sped;
+    float speed;
+
     Vector3 direction;
-    // Update is called once per frame
     void Update()
     {
         transform.rotation = cam_parent.rotation;
@@ -18,6 +18,6 @@ public class Shmooving : CamUpdate
     }
     private void FixedUpdate()
     {
-        gameObject.transform.Translate(sped * Time.deltaTime * direction);
+        gameObject.transform.Translate(speed * Time.deltaTime * direction);
     }
 }

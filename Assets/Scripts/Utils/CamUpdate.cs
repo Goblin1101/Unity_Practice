@@ -12,12 +12,6 @@ public class CamUpdate : MonoBehaviour
     {
         UpdateCamera();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public virtual void UpdateCamera()
     {
         cam = Camera.main;
